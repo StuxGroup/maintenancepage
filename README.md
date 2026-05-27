@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://media.stux.group/global/logo.png" width="200" alt="StuxGroup Logo">
+</p>
+
 # Maintenance Page
 
 A clean and simple maintenance page template for StuxGroup projects based on the soonpage design.
