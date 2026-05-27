@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://media.stux.group/global/logo.png" width="200" alt="StuxGroup Logo">
+  <img src="https://media.stux.group/global/logo.png" width="200" alt="Stux.Group Logo">
 </p>
 
 # Maintenance Page
 
-A clean and simple maintenance page template for StuxGroup projects based on the soonpage design.
+A clean and simple maintenance page template for Stux.Group projects based on the soonpage design.
 
 ## Overview
 
@@ -47,4 +47,4 @@ This project is open source and available for use and modification.
 
 ---
 
-Made by [StuxGroup](https://github.com/StuxGroup)
+Made by [Stux.Group](https://github.com/StuxGroup)
