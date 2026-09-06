@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <title>Privacy Policy &mdash; Boring Legal Stuff &mdash; Stux.Group</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Privacy policy for this Stux.Group maintenance page: what it does and doesn't collect.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://media.stux.group/global/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --red: #D11010; --red-mid: #d95656; --red-soft: #bf3a3a; }
+        [data-theme="dark"] { --bg:#1e0303; --text:#ffffff; --muted:#d9b6b6; --card:rgba(255,255,255,0.04); --border:rgba(255,255,255,0.12); }
+        [data-theme="light"] { --red-mid:#a01818; --red-soft:#7a0f0f; --bg:#ffe8e6; --text:#111111; --muted:#6b4a4a; --card:rgba(0,0,0,0.03); --border:rgba(0,0,0,0.12); }
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { margin:0; padding:0; min-height:100%; background-color:var(--bg); color:var(--text); font-family:'Barlow', sans-serif; transition:background-color 0.3s, color 0.3s; }
+        a { color: var(--red); text-decoration: none; font-weight: 700; }
+        a:hover { text-decoration: underline; }
+        .topbar { display:flex; align-items:center; padding:18px 6%; }
+        .topbar a { display:flex; align-items:center; gap:10px; font-weight:700; }
+        .topbar img { height:32px; width:auto; }
+        #theme-toggle { position:fixed; top:14px; right:14px; z-index:100; background:rgba(209,16,16,0.12); border:1px solid rgba(209,16,16,0.35); border-radius:50%; width:38px; height:38px; font-size:17px; line-height:38px; text-align:center; cursor:pointer; padding:0; color:var(--text); transition:background 0.2s; }
+        #theme-toggle:hover { background: rgba(209, 16, 16, 0.22); }
+        main { max-width:720px; margin:0 auto; padding:10px 6% 60px; }
+        .back-link { display:inline-block; margin-bottom:24px; font-size:14px; }
+        h1 { font-size: clamp(28px, 5vw, 38px); margin: 12px 0 6px; }
+        .meta { color: var(--muted); font-size: 13px; margin: 0 0 28px; }
+        h2 { font-size: 19px; margin: 30px 0 8px; color: var(--red); }
+        p, li { line-height: 1.65; font-size: 15px; }
+        ul { padding-left: 20px; }
+        footer.site-footer { text-align:center; padding:30px 6% 30px; font-size:12px; color:var(--muted); }
+        footer.site-footer a { color: var(--muted); font-weight:400; text-decoration:underline; }
+    </style>
+</head>
+<body>
+
+    <div class="topbar">
+        <a href="../index.html">
+            <img src="https://media.stux.group/global/icon.png" alt="Stux.Group">
+            <span>Stux.Group</span>
+        </a>
+    </div>
+
+    <button id="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle light/dark mode">&#9728;</button>
+
+    <main>
+        <a href="../legal.html" class="back-link">&larr; Boring Legal Stuff</a>
+        <h1>Privacy Policy</h1>
+        <p class="meta">Effective: September 2026 &mdash; applies to this maintenance page (maintenancepage.stux.group).</p>
+
+        <h2>The short version</h2>
+        <p>This page is a temporary holding page shown while a Stux.Group project or service is offline for maintenance. It's static HTML hosted on GitHub Pages &mdash; there's no server-side code of ours behind it, no database, and nothing here designed to collect information about you.</p>
+
+        <h2>What this page collects</h2>
+        <p>Nothing, directly. There's no account system, no forms, no analytics scripts, and no advertising or tracking pixels anywhere on this page.</p>
+
+        <h2>Third-party requests</h2>
+        <p>Your browser loads a couple of things directly from third-party CDNs, which may log the request under their own policies:</p>
+        <ul>
+            <li>The <strong>Barlow</strong> font, from <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Fonts</a>.</li>
+            <li><strong>Font Awesome</strong> icons, from <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cdnjs/Cloudflare</a>.</li>
+        </ul>
+        <p>This page itself is served by <strong>GitHub Pages</strong>, which may log visits per GitHub's own <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">privacy statement</a>. Stux.Group has no visibility into those logs.</p>
+
+        <h2>localStorage</h2>
+        <p>The only thing this page stores in your browser is a single flag, <code>sg-theme</code>, set when you toggle light/dark mode so your preference is remembered on your next visit. It stays on your device and can be cleared any time via your browser's site data settings.</p>
+
+        <h2>Social links</h2>
+        <p>The Bluesky and LinkedIn icons on the maintenance page are plain links, not embedded widgets &mdash; clicking one takes you to that platform's own site, under its own privacy policy. Nothing is loaded from either platform unless you click through.</p>
+
+        <h2>Children's privacy</h2>
+        <p>This page isn't directed at children, though since nothing is collected here anyway, that distinction doesn't change anything in practice.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If this policy changes meaningfully, the effective date above will be updated.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about privacy? Email <a href="mailto:legal@stux.group">legal@stux.group</a>.</p>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Stux.Group &mdash; part of the Stux.Group Brand of Companies.</p>
+        <p><a href="../legal.html">&larr; Boring Legal Stuff</a></p>
+    </footer>
+
+    <script>
+        var btn = document.getElementById('theme-toggle');
+        var html = document.documentElement;
+        var saved = localStorage.getItem('sg-theme') || 'dark';
+        html.setAttribute('data-theme', saved);
+        btn.textContent = saved === 'dark' ? '☀' : '☾';
+        btn.addEventListener('click', function() {
+            var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            btn.textContent = next === 'dark' ? '☀' : '☾';
+            localStorage.setItem('sg-theme', next);
+        });
+    </script>
+</body>
+</html>

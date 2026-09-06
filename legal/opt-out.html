@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <title>Opt-Out Preferences &mdash; Boring Legal Stuff &mdash; Stux.Group</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="This Stux.Group maintenance page sells or shares no personal data, so there's nothing to opt out of.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://media.stux.group/global/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --red: #D11010; --red-mid: #d95656; --red-soft: #bf3a3a; }
+        [data-theme="dark"] { --bg:#1e0303; --text:#ffffff; --muted:#d9b6b6; --card:rgba(255,255,255,0.04); --border:rgba(255,255,255,0.12); }
+        [data-theme="light"] { --red-mid:#a01818; --red-soft:#7a0f0f; --bg:#ffe8e6; --text:#111111; --muted:#6b4a4a; --card:rgba(0,0,0,0.03); --border:rgba(0,0,0,0.12); }
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { margin:0; padding:0; min-height:100%; background-color:var(--bg); color:var(--text); font-family:'Barlow', sans-serif; transition:background-color 0.3s, color 0.3s; }
+        a { color: var(--red); text-decoration: none; font-weight: 700; }
+        a:hover { text-decoration: underline; }
+        .topbar { display:flex; align-items:center; padding:18px 6%; }
+        .topbar a { display:flex; align-items:center; gap:10px; font-weight:700; }
+        .topbar img { height:32px; width:auto; }
+        #theme-toggle { position:fixed; top:14px; right:14px; z-index:100; background:rgba(209,16,16,0.12); border:1px solid rgba(209,16,16,0.35); border-radius:50%; width:38px; height:38px; font-size:17px; line-height:38px; text-align:center; cursor:pointer; padding:0; color:var(--text); transition:background 0.2s; }
+        #theme-toggle:hover { background: rgba(209, 16, 16, 0.22); }
+        main { max-width:720px; margin:0 auto; padding:10px 6% 60px; }
+        .back-link { display:inline-block; margin-bottom:24px; font-size:14px; }
+        h1 { font-size: clamp(28px, 5vw, 38px); margin: 12px 0 6px; }
+        .meta { color: var(--muted); font-size: 13px; margin: 0 0 28px; }
+        h2 { font-size: 19px; margin: 30px 0 8px; color: var(--red); }
+        p, li { line-height: 1.65; font-size: 15px; }
+        ul { padding-left: 20px; }
+        footer.site-footer { text-align:center; padding:30px 6% 30px; font-size:12px; color:var(--muted); }
+        footer.site-footer a { color: var(--muted); font-weight:400; text-decoration:underline; }
+    </style>
+</head>
+<body>
+
+    <div class="topbar">
+        <a href="../index.html">
+            <img src="https://media.stux.group/global/icon.png" alt="Stux.Group">
+            <span>Stux.Group</span>
+        </a>
+    </div>
+
+    <button id="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle light/dark mode">&#9728;</button>
+
+    <main>
+        <a href="../legal.html" class="back-link">&larr; Boring Legal Stuff</a>
+        <h1>Opt-Out Preferences</h1>
+        <p class="meta">The short version: there's nothing to opt out of.</p>
+
+        <h2>No data sale or sharing</h2>
+        <p>Laws like California's CCPA/CPRA give you the right to opt out of the sale or sharing of your personal data. This page has nothing to opt out of in that sense &mdash; it doesn't collect personal data for advertising or analytics, so there's none to sell or share.</p>
+
+        <h2>What actually happens</h2>
+        <p>The only outside data flow is your own browser loading a font and some icons directly from their CDNs, and GitHub Pages serving and logging the page itself (see the <a href="privacy.html">Privacy Policy</a>). Neither is something Stux.Group could sell even if it wanted to &mdash; we're not in the middle of either request.</p>
+
+        <h2>Do Not Track</h2>
+        <p>Because this page runs no tracking scripts, a browser's "Do Not Track" signal has no additional effect here &mdash; there's nothing being tracked either way.</p>
+
+        <h2>Questions</h2>
+        <p>If you have questions about data handling not covered here, email <a href="mailto:legal@stux.group">legal@stux.group</a>.</p>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Stux.Group &mdash; part of the Stux.Group Brand of Companies.</p>
+        <p><a href="../legal.html">&larr; Boring Legal Stuff</a></p>
+    </footer>
+
+    <script>
+        var btn = document.getElementById('theme-toggle');
+        var html = document.documentElement;
+        var saved = localStorage.getItem('sg-theme') || 'dark';
+        html.setAttribute('data-theme', saved);
+        btn.textContent = saved === 'dark' ? '☀' : '☾';
+        btn.addEventListener('click', function() {
+            var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            btn.textContent = next === 'dark' ? '☀' : '☾';
+            localStorage.setItem('sg-theme', next);
+        });
+    </script>
+</body>
+</html>
