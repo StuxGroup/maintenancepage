@@ -2,6 +2,12 @@
 
 All notable changes to Maintenance Page are documented here.
 
+## v1.3.2
+
+### Changed
+
+- Copy now reads "this website and/or service", since this page is reused whenever a specific Stux.Group service (not just the website) is under maintenance
+
 ## v1.3.1
 
 ### Changed
