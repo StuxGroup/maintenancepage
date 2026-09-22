@@ -22,7 +22,7 @@ a static site with no build step. Then open `http://127.0.0.1:8000`.
   which files each page actually references.
 - Deployed via GitHub Pages to [maintenancepage.stux.group](https://maintenancepage.stux.group)
   (see `CNAME`) — pushing to `main` deploys automatically.
-- This is a sister repo based on `Soonpage`'s design — if you change shared
+- This is a sister repo based on `soonpage`'s design — if you change shared
   styling/structure here (theme toggle, social links, legal link, animated
   background), consider whether it should change there too.
 

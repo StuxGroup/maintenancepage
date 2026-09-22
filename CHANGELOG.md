@@ -2,6 +2,12 @@
 
 All notable changes to Maintenance Page are documented here.
 
+## v1.3.3
+
+### Fixed
+
+- Local checkout folder renamed from `MaintenancePage` to `maintenancepage` to match the repo name's actual casing; a stale `Soonpage` reference in CONTRIBUTING.md corrected to `soonpage`
+
 ## v1.3.2
 
 ### Changed
