@@ -2,6 +2,12 @@
 
 All notable changes to Maintenance Page are documented here.
 
+## v1.3.5
+
+### Fixed
+
+- `.markdownlint.json` was missing several rule overrides (MD001/MD009/MD022/MD031/MD032) that every other repo in the org already disables, which was intermittently failing CI. Brought it in line with the standard config.
+
 ## v1.3.4
 
 ### Fixed
