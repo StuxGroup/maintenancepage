@@ -43,6 +43,10 @@ Edit the HTML files to:
 
 This project uses GitHub Pages and is automatically deployed to [maintenancepage.stux.group](http://maintenancepage.stux.group/).
 
+## Versioning
+
+Maintenance Page uses [Date Versioning](https://datevers.ing): each release is numbered by its UTC release date as `YY.MM.DD` (for example `26.10.23`), with `-1`, `-2`… added for later releases the same day. The current version is in [`VERSION.md`](VERSION.md) and every release is listed in [`CHANGELOG.md`](CHANGELOG.md) (also shown at [/changelog](https://maintenancepage.stux.group/changelog)). Releases up to v1.4.4 used Semantic Versioning.
+
 ## License
 
 This project is open source and available for use and modification.
@@ -56,3 +60,5 @@ Made by [Stux.Group](https://github.com/StuxGroup)
 ## Local preview
 
 Run `./dev-server.sh` (or `dev-server.bat`, add a port as the last argument) to serve the site at `http://127.0.0.1:8000` the way GitHub Pages does, with the dev-mode banner on. Add `--no-dev-mode` to see it exactly as production does, or `?banner=soon,maintenance,site` to preview the other banner types. It uses PHP 7.4's built-in server (set `PHP_BIN` to pick another PHP).
+
+Run the tests with `bash tests/run.sh` (Python 3 and Node; PHP 7.4 for the dev-server checks).

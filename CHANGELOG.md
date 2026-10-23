@@ -1,6 +1,23 @@
 # Changelog
 
-All notable changes to Maintenance Page are documented here.
+All notable changes to Maintenance Page are documented here. Since v26.10.23 this project uses
+[Date Versioning](https://datevers.ing) (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for
+later releases the same day); earlier releases used Semantic Versioning.
+
+## v26.10.23
+
+### Added
+
+- A full icon set: `favicon.ico` (16, 32 and 48px) and `apple-touch-icon.png` at the site root, and a `site.webmanifest` with 192px, 512px and maskable icons, so the page has a proper icon in browser tabs, bookmarks and on phone home screens (the home-screen icons sit on a white background, as iOS would otherwise fill the icon's transparent corners with black). Every page, the 404 page included, lists the same icons
+- Discord link previews: sharing any page in Discord shows a custom preview in the Stux.Group red, with the page's name, what it is and a few links (the maintenance page links to Bluesky for updates, Stux.Group and all services; the legal pages link back home). Names and descriptions show as plain text, and the 404 page has none. They're pre-built into each page's `<head>` by `python scripts/build-head-tags.py`, which `scripts/build-sitemap.py` now runs too
+- A test suite, `bash tests/run.sh`, checking the version, the changelog page's parser, the Discord previews, the icon set and (with PHP) the local dev server
+
+### Changed
+
+- Maintenance Page switched from Semantic Versioning (last release v1.4.4) to [Date Versioning](https://datevers.ing): each release is numbered by its UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day
+- `commit.sh` and `commit.bat` refuse a `VERSION.md` that isn't a valid Date Version or is dated in the future (UTC), and warn when it's dated before today
+- The tab icon is the new `favicon.ico` on every page, in place of the light/dark icons from the brand's media host
+- The local dev server serves `site.webmanifest` as `application/manifest+json`, the way GitHub Pages does
 
 ## v1.4.4
 
