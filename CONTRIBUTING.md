@@ -32,6 +32,12 @@ a static site with no build step. Then open `http://127.0.0.1:8000`.
 
 Run `bash tests/run.sh` before every release. It needs Python 3 and Node (and PHP 7.4 for the dev-server checks, which are skipped without it), with no other dependencies. It checks that `VERSION.md` is a valid Date Version matching the newest `CHANGELOG.md` entry, that the changelog page reads Date Version headings and orders its sections correctly, that every page's Discord preview is valid and up to date, and that the icon set is complete and served correctly.
 
+## Branches
+
+- Work on `test`, or on a feature branch off it. Never push to `main`
+- Changes reach `main` only through a pull request from `test` into `main`, which needs CI to pass and is reviewed and merged by Leo
+- Merging into `main` deploys the site to GitHub Pages; release commits and tags are made on `test` (`git push origin test --tags`) and go live when the pull request is merged
+
 ## Versioning and changelog
 
 - Maintenance Page uses [Date Versioning](https://datevers.ing): the version is the UTC release date as `YY.MM.DD`, plus `-1`, `-2`… for later releases the same UTC day (`26.10.23`, then `26.10.23-1`). Always take the date from `date -u`, never local time, and never use a future date. Releases up to v1.4.4 used Semantic Versioning
