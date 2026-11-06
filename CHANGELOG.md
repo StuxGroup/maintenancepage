@@ -4,6 +4,18 @@ All notable changes to Maintenance Page are documented here. Since v26.10.23 thi
 [Date Versioning](https://datevers.ing) (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for
 later releases the same day); earlier releases used Semantic Versioning.
 
+## v26.11.06-2
+
+### Changed
+
+- `README.md` is titled with the page's full name, Stux.Group Maintenancepage, as on services.stux.group, and lists what
+  the page has now: the Boring Legal Stuff hub, the changelog page, the sitemap, the Discord link preview and the
+  site banners
+- `README.md`'s License section and footer come last again (the Local preview section had ended up after the
+  footer), and its licence wording is corrected to match `LICENSE.md`: it said the project was open source
+- The README's site links use https
+- `CONTRIBUTING.md` says to push releases to `test` and open a pull request into `main`
+
 ## v26.11.06-1
 
 ### Changed
