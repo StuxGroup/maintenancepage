@@ -4,6 +4,12 @@ All notable changes to Maintenance Page are documented here. Since v26.10.23 thi
 [Date Versioning](https://datevers.ing) (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for
 later releases the same day); earlier releases used Semantic Versioning.
 
+## v26.11.06-1
+
+### Changed
+
+- The site deploys to GitHub Pages from a GitHub Actions workflow (`.github/workflows/pages.yml`) instead of GitHub's legacy branch build, like Servicepage and Soonpage, so every deploy is a visible job that can be rerun or started by hand
+
 ## v26.11.06
 
 ### Added
