@@ -33,15 +33,21 @@ to devices on your local network and prints the addresses to open.
 
 Run `bash tests/run.sh` before every release. It needs Python 3 and Node (and PHP 7.4 for the dev-server checks, which are skipped without it), with no other dependencies. It checks that `VERSION.md` is a valid Date Version matching the newest `CHANGELOG.md` entry, that the changelog page reads Date Version headings and orders its sections correctly, that every page's Discord preview is valid and up to date, and that the icon set is complete and served correctly.
 
-## Branches
+## Branches and going live
 
-- Work on `test`, or on a feature branch off it. Never push to `main`
-- Changes reach `main` only through a pull request from `test` into `main`, which needs CI to pass and is reviewed and merged by Leo
-- Merging into `main` deploys the site to GitHub Pages; release commits and tags are made on `test` (`git push origin test --tags`) and go live when the pull request is merged
+- **`main` is what's live.** Nothing is pushed to it directly: it only changes when a pull request from `staging` is
+  merged.
+- **`staging` is the last check before live.** It only changes when a pull request from `test` is merged.
+- **Work happens on `test`**, or on a feature branch off `test` that's merged back into it. Releases are made on `test`
+  too; `commit.sh` / `commit.bat` refuse to run on `staging` or `main`.
+- **Going live:** push `test` with its tag (`git push origin test --tags`), open a pull request into staging
+  (`gh pr create --base staging --head test`), check staging once it's merged, then open one from staging into main
+  (`gh pr create --base main --head staging`). CI runs on both pull requests; Leo reviews and merges them.
+- **Deploys:** Merging the pull request into `main` deploys the site to GitHub Pages. Merging into `staging` doesn't deploy anything.
 
 ## Versioning and changelog
 
 - Maintenance Page uses [Date Versioning](https://datevers.ing): the version is the UTC release date as `YY.MM.DD`, plus `-1`, `-2`… for later releases the same UTC day (`26.10.23`, then `26.10.23-1`). Always take the date from `date -u`, never local time, and never use a future date. Releases up to v1.4.4 used Semantic Versioning
 - The version lives in `VERSION.md` (the bare version, no `v`) — set it on every release; git tags and changelog headings keep the `v` (`v26.10.23`)
 - Every release gets a `CHANGELOG.md` entry (`## vYY.MM.DD`) using `### Added` / `### Changed` / `### Fixed` / `### Removed` / `### Security` / `### Deprecated` subsections, in that order — never a bare bullet list directly under a version heading
-- `commit.sh` (bash) and `commit.bat` (Windows) read `VERSION.md`, refuse a version that isn't a valid Date Version or is dated in the future (UTC), warn if it's dated before today, then handle the commit + `git tag` for a release — no need to edit them per release. They don't push; push with `git push origin test --tags`, then open a pull request from `test` into `main`
+- `commit.sh` (bash) and `commit.bat` (Windows) read `VERSION.md`, refuse a version that isn't a valid Date Version or is dated in the future (UTC), warn if it's dated before today, then handle the commit + `git tag` for a release — no need to edit them per release. They don't push; push with `git push origin test --tags`, then open a pull request from `test` into `staging`, and once that's merged and checked, one from `staging` into `main` (see "Branches and going live")
